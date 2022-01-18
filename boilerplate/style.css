@@ -7,6 +7,15 @@
 
 :root {
     font-size: 18px;
+    --primary-color: #ffe900;
+    --primary-color-light: #FFED33;
+    --primary-color-dark: #E6D200;
+
+    --secondary-color: #0016ff;
+    --secondary-color-light: #3345FF;
+    --secondary-color-dark: #0012CC;
+
+    --Tertiary-color: #808bff;
 }
 
 body {
