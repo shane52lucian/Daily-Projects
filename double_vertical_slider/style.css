@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 18px;
+    --primary-color: #ffe900;
+    --primary-color-light: #FFED33;
+    --primary-color-dark: #E6D200;
+
+    --secondary-color: #0016ff;
+    --secondary-color-light: #3345FF;
+    --secondary-color-dark: #0012CC;
+
+    --Tertiary-color: #808bff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: .5em;
+    color: var(--Tertiary-color);
+}
+
+p {
+    font-size: .7rem;
+    margin-bottom: 1em;
+    color: #fff;
+}
+
+button {
+    background-color: #fff;
+    border: none;
+    font-size: 1.5rem;
+    padding: .5em;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+button:hover {
+    color: var(--primary-color-dark);
+}
+
+.slider-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.left-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.left-slide>div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .7rem;
+}
+
+.right-slide {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 65%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.right-slide>div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+}
+
+.slider-container .action-buttons button {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    z-index: 100;
+}
+
+.down-button {
+    transform: translateX(-100%);
+    border-top-left-radius: .15em;
+    border-bottom-left-radius: .15em;
+}
+
+.up-button {
+    transform: translateY(-100%);
+    border-top-right-radius: .15em;
+    border-bottom-right-radius: .15em;
+}
